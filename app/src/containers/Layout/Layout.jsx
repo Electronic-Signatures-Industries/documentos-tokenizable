@@ -1,23 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import {Container } from 'reactstrap';
+import {Container, Row, Col } from 'reactstrap';
+
 
 import Header from '../../components/Header/Header';
+import SideBar from '../../components/SideBar/SideBar';
 import './layout.scss';
 
 const Layout = ({children}) => {  
 	return (
 		<div >         
 			<Header />
-			<main>
-				<Container>
-					{children}
-				</Container>
-			</main>
-			<div>
-				<Container>
-				</Container>
-			</div>
+			<Row className="row-layout">
+				<Col md="2">
+					<SideBar />
+				</Col>
+				<Col md="8">
+					<main>
+						<Container>
+							{children}
+						</Container>
+					</main>
+					<div>
+						<Container>
+						</Container>
+					</div>
+				</Col>
+			</Row>
+			
 		</div>
 	)
 }
