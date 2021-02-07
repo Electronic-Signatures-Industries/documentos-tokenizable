@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
+import Home from './containers/Home/Home'
 
 import Layout from './containers/Layout/Layout';
 
@@ -12,6 +13,7 @@ const AppRoute = () => {
 				render={props => 
 					(
 						<Layout {...props}>
+							<Home />
 						</Layout>
 					)} 
 			/>

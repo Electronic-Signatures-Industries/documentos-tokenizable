@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import PropTypes from 'prop-types';
 import {Container, Row, Col } from 'reactstrap';
 
@@ -8,14 +8,15 @@ import SideBar from '../../components/SideBar/SideBar';
 import './layout.scss';
 
 const Layout = ({children}) => {  
+	const [isSlide, setIsSlide] = useState(false);
 	return (
 		<div >         
-			<Header />
+			<Header setIsSlide={setIsSlide} isSlide={isSlide} />
 			<Row className="row-layout">
 				<Col md="2">
-					<SideBar />
+					<SideBar isSlide={isSlide} />
 				</Col>
-				<Col md="8">
+				<Col md="10">
 					<main>
 						<Container>
 							{children}
