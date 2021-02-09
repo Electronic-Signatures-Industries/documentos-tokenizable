@@ -1,4 +1,7 @@
 {
     "header_title": "Documentos",
-    "header_conect": "Conectar"
+    "header_conect": "Conectar",
+    "sidebar_home": "Inicio",
+    "sidebar_provider": "Proveedores",
+    "sidebar_request": "Solicitudes"
 }

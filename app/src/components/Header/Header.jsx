@@ -29,7 +29,7 @@ const Header = (props) => {
 					<Typography variant="h6" className="title">
 						{i18n.t('header_title')}
 					</Typography>
-					<Button color="inherit">{i18n.t('header_conect')}</Button>
+					<Button color="inherit" className="btn-connect">{i18n.t('header_conect')}</Button>
 				</Toolbar>
 			</AppBar>
 		</div>

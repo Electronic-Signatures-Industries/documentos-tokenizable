@@ -13,10 +13,10 @@ const Layout = ({children}) => {
 		<div >         
 			<Header setIsSlide={setIsSlide} isSlide={isSlide} />
 			<Row className="row-layout">
-				<Col md="2">
+				<Col md={isSlide ? '2' : '3'}>
 					<SideBar isSlide={isSlide} />
 				</Col>
-				<Col md="10">
+				<Col md="8">
 					<main>
 						<Container>
 							{children}
