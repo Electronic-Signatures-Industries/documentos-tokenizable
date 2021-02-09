@@ -1,0 +1,24 @@
+.container-background {
+    background: white;
+    margin-top: 3rem;
+    box-shadow: 0 0 2px grey;
+    margin-left: -3rem;
+    .box {
+        background: #3AC13C;
+        width: 100px;
+        height: 90px;
+        border-radius: 10px;
+        position: relative;
+        top: -1rem;
+        left: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    .icon {
+        font-size: 30px;
+    }
+}
+
