@@ -1,0 +1,51 @@
+.container-sidebar {
+    background: linear-gradient(40deg, #3f51b5,#6070ca);
+    height: 100vh;
+    width: 257px;
+    transition: width 1s;
+    padding-top: 20px;
+    .icon-color {
+        color: white;
+        margin-top: 7px;
+    }
+    ul {
+        list-style: none;
+        position: relative;
+        right: 30px;
+    }
+    li {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        margin-left: -10px;
+        height: 40px;
+    }
+    li:hover {
+        background: #d2d2cd;
+        cursor: pointer;
+        width: 257px;
+    }
+    .select-list:hover {
+        width: 50px;
+    }
+    a {
+        text-decoration:none;
+    }
+    span {
+        color: white;
+        padding-left: 10px;
+        position: relative;
+        top: 7px;
+    }
+    div {
+        padding: 5px;
+        height: 36px;
+    }
+    .selected {
+        border-left: solid 3px #40ff00;
+    }
+}
+
+.slide {
+    width: 50px;
+    transition: width 1s;
+}
