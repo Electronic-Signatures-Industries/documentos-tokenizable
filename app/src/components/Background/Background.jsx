@@ -7,7 +7,11 @@ const Background = (props) => {
 	const Icon = props.icon;
 	return (
 		<div className="container-background">
-			<div className="box"><Icon className="icon" /></div>
+			<div className="container-title">
+				<div className="box"><Icon className="icon" /></div>
+				<span>{props.title}</span>
+			</div>
+			
 			{props.children}
 		</div>
 	)
@@ -16,6 +20,7 @@ const Background = (props) => {
 Background.propTypes = {
 	children: PropTypes.node.isRequired,
 	icon: PropTypes.object.isRequired,
+	title: PropTypes.string.isRequired,
 };
 
 export default Background;

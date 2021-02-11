@@ -1,3 +1,6 @@
 .row-layout {
     margin-right: 0px;
+    .col-sidebar {
+        z-index: 3;
+    }
 }

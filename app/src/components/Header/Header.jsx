@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,9 +12,16 @@ import i18n from 'i18next';
 import './header.scss';
 
 const Header = (props) => {
+	useEffect(() => {
+		if(isMobile) {
+			props.setIsSlide(!props.isSlide)
+		}
+	}, [isMobile]);
+
 	const handleSide = () => {
 		props.setIsSlide(!props.isSlide)
 	}
+	
 	return (
 		<div className="root">
 			<AppBar position="static">

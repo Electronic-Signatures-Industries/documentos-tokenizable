@@ -3,6 +3,13 @@
     margin-top: 3rem;
     box-shadow: 0 0 2px grey;
     margin-left: -3rem;
+    .container-title {
+        display: grid;
+        grid-template-columns: 14% auto;
+        span {
+            padding-top: 5px;
+        }
+    }
     .box {
         background: #3AC13C;
         width: 100px;
