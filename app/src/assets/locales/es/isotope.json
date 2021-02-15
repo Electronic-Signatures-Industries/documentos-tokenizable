@@ -3,5 +3,7 @@
     "header_conect": "Conectar",
     "sidebar_home": "Inicio",
     "sidebar_provider": "Proveedores",
-    "sidebar_request": "Solicitudes"
+    "sidebar_request": "Solicitudes",
+    "connect_wallet": "Conectarse a una billetera",
+    "connect_learn_connect": "Aprenda a conectarse"
 }

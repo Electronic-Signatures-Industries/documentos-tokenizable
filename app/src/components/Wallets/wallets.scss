@@ -1,0 +1,14 @@
+.wallet-border {
+    background: lightgrey;
+    background-color: #eff4f5;
+    color: #1fc7d4;
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 80% max-content;
+    padding-top: 14px;
+    padding-left: 2rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

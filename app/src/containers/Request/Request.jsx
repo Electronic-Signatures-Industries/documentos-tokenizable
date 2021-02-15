@@ -1,6 +1,5 @@
 import React from 'react';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import Background from '../../components/Background/Background';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -10,6 +9,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import i18n from 'i18next';
+
+import Background from '../../components/Background/Background';
 
 
 const columns = [
@@ -85,7 +87,7 @@ const Request = () => {
 	};
 	return (
 		<div>
-			<Background icon={AssignmentIcon} title="Solicitudes">
+			<Background icon={AssignmentIcon} title={i18n.t('sidebar_request')}>
 				<Paper className={classes.root}>
 					<TableContainer className={classes.container}>
 						<Table stickyHeader aria-label="sticky table">
