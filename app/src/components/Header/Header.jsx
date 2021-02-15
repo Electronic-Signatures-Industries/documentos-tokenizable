@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import i18n from 'i18next';
 
-import Modal from '../Modal/Modal';
+import ModalConect from '../Modal/Modal';
 import './header.scss';
 
 const Header = (props) => {
@@ -26,6 +26,7 @@ const Header = (props) => {
 	}
 
 	const handleClickOpen = () => {
+		console.log('handleClickOpen')
 		setOpen(true);
 	};
 	
@@ -50,7 +51,7 @@ const Header = (props) => {
 						onClick={handleClickOpen}>{i18n.t('header_conect')}</Button>
 				</Toolbar>
 			</AppBar>
-			<Modal open={open} setOpen={setOpen} />
+			<ModalConect setOpen={setOpen} open={open}  />
 		</div>
 	)
     

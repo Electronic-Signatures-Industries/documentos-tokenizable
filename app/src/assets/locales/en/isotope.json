@@ -3,5 +3,7 @@
     "header_conect": "Conect",
     "sidebar_home": "Home",
     "sidebar_provider": "Providers",
-    "sidebar_request": "Requests"
+    "sidebar_request": "Requests",
+    "connect_wallet": "Connect to a wallet",
+    "connect_learn_connect": "Learn how to connect"
 }
