@@ -2,7 +2,6 @@ import React, { useState }  from 'react'
 import PropTypes from 'prop-types';
 import {Container, Row, Col } from 'reactstrap';
 
-
 import Header from '../../components/Header/Header';
 import SideBar from '../../components/SideBar/SideBar';
 import './layout.scss';
@@ -37,4 +36,4 @@ Layout.propTypes = {
 	children: PropTypes.node.isRequired,
 };
 
-export default Layout
+export default (Layout);

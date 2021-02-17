@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import './background.scss';
 
 const Background = (props) => {
 	const Icon = props.icon;
+	console.log(props.isSide)
 	return (
 		<div className="container-background">
 			<div className="container-title">
@@ -21,6 +23,16 @@ Background.propTypes = {
 	children: PropTypes.node.isRequired,
 	icon: PropTypes.object.isRequired,
 	title: PropTypes.string.isRequired,
+	isSide: PropTypes.bool.isRequired
 };
 
-export default Background;
+const mapStateToProps = state => {
+	return {
+		isSide: state.side.isSide,
+	};
+};
+
+export default connect(
+	mapStateToProps,
+	null
+) (Background);

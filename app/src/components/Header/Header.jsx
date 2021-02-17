@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import { isMobile } from 'react-device-detect';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -9,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import i18n from 'i18next';
 
+import * as actions from '../../store/actions/index';
 import ModalConect from '../Modal/Modal';
 import './header.scss';
 
@@ -22,11 +24,11 @@ const Header = (props) => {
 	}, [isMobile]);
 
 	const handleSide = () => {
+		props.onActive(!props.isSlide)
 		props.setIsSlide(!props.isSlide)
 	}
 
 	const handleClickOpen = () => {
-		console.log('handleClickOpen')
 		setOpen(true);
 	};
 	
@@ -59,8 +61,18 @@ const Header = (props) => {
 
 Header.propTypes = {
 	setIsSlide: PropTypes.func.isRequired,
-	isSlide: PropTypes.bool.isRequired
+	isSlide: PropTypes.bool.isRequired,
+	onActive: PropTypes.func.isRequired
 };
 
+const mapDispatchToProps = dispatch => {
+	return {
+		onActive: (type, data) =>
+			dispatch(actions.active(type, data)),
+	};
+};
 
-export default Header;
+export default connect(
+	null,
+	mapDispatchToProps
+) (Header);

@@ -1,0 +1,1 @@
+export const IS_SIDE = 'IS_SIDE';
