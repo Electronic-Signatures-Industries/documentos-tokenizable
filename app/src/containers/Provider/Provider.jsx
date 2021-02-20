@@ -1,6 +1,7 @@
 import React from 'react';
 import GroupIcon from '@material-ui/icons/Group';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -87,6 +88,9 @@ const Provider = () => {
 	return (
 		<div>
 			<Background icon={GroupIcon} title={i18n.t('sidebar_provider')}>
+				<Button variant="contained" color="primary" className="btn-new">
+					{i18n.t('provider_button')}
+				</Button>
 				<Paper className={classes.root}>
 					<TableContainer className={classes.container}>
 						<Table stickyHeader aria-label="sticky table">

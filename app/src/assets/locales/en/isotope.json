@@ -5,5 +5,13 @@
     "sidebar_provider": "Providers",
     "sidebar_request": "Requests",
     "connect_wallet": "Connect to a wallet",
-    "connect_learn_connect": "Learn how to connect"
+    "connect_learn_connect": "Learn how to connect",
+    "request_button": "New Request",
+    "request_send_request": "Send Notarial Request",
+    "request_send_to": "Send to",
+    "request_name": "Name",
+    "request_last_name": "LastName",
+    "request_email": "Email",
+    "request_description": "Description",
+    "provider_button": "New Provider"
 }

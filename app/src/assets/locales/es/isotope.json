@@ -5,5 +5,13 @@
     "sidebar_provider": "Proveedores",
     "sidebar_request": "Solicitudes",
     "connect_wallet": "Conectarse a una billetera",
-    "connect_learn_connect": "Aprenda a conectarse"
+    "connect_learn_connect": "Aprenda a conectarse",
+    "request_button": "Nueva Solicitud",
+    "request_send_request": "Enviar Solicitud notarial",
+    "request_send_to": "Enviar a",
+    "request_name": "Nombre",
+    "request_last_name": "Apellido",
+    "request_email": "Correo",
+    "request_description": "Descripcion",
+    "provider_button": "Nuevo Proveedor"
 }

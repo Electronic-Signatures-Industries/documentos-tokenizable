@@ -1,13 +1,15 @@
-.MuiDialog-paperWidthSm {
-    max-width: 415px !important;
-    border-radius: 20px !important;
-    width: 100%;
-}
-
-.MuiDialogActions-root {
-    justify-content: center !important;
-}
-
-svg {
-    margin-top: -5px;
+#container-modal {
+    .MuiDialog-paperWidthSm {
+        max-width: 415px !important;
+        border-radius: 20px !important;
+        width: 100%;
+    }
+    
+    .MuiDialogActions-root {
+        justify-content: center !important;
+    }
+    
+    svg {
+        margin-top: -5px;
+    }
 }

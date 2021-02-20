@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,6 +12,7 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import i18n from 'i18next';
 
+import ModalConect from '../../components/RequestModal/RequestModal';
 import Background from '../../components/Background/Background';
 
 
@@ -76,6 +78,7 @@ const Request = () => {
 	const classes = useStyles();
 	const [page, setPage] = React.useState(0);
 	const [rowsPerPage, setRowsPerPage] = React.useState(10);
+	const [open, setOpen] = useState(false);
 
 	const handleChangePage = (event, newPage) => {
 		setPage(newPage);
@@ -85,9 +88,21 @@ const Request = () => {
 		setRowsPerPage(+event.target.value);
 		setPage(0);
 	};
+
+	const handleClickOpen = () => {
+		setOpen(true);
+	};
+
 	return (
 		<div>
 			<Background icon={AssignmentIcon} title={i18n.t('sidebar_request')}>
+				<Button 
+					variant="contained" 
+					color="primary" 
+					className="btn-new" 
+					onClick={handleClickOpen}>
+        			{i18n.t('request_button')}
+				</Button>
 				<Paper className={classes.root}>
 					<TableContainer className={classes.container}>
 						<Table stickyHeader aria-label="sticky table">
@@ -136,6 +151,7 @@ const Request = () => {
 					/>
 				</Paper>
 			</Background>
+			<ModalConect setOpen={setOpen} open={open}  />
 		</div>
 		
 	)
