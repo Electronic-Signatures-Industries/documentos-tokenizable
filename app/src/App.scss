@@ -1,5 +1,6 @@
 $white-color: #ffff;
 $black-color: #0000;
+$main-color: #3AC13C;
 
 
 .btn-new {
@@ -7,5 +8,9 @@ $black-color: #0000;
     position: relative !important;
     right: 1rem;
     margin-bottom: 10px !important;
-    background: #3AC13C !important;
+    background: $main-color !important;
+}
+
+.btn-modal {
+    background: $main-color !important;
 }

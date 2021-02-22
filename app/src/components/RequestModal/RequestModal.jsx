@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types'
 import {Row, Col} from 'reactstrap';
 import Dialog from '@material-ui/core/Dialog';
@@ -13,6 +13,7 @@ import Input from '@material-ui/core/TextField';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Slide from '@material-ui/core/Slide';
+import Button from '@material-ui/core/Button';
 import i18n from 'i18next';
 
 import './RequestModal.scss';
@@ -23,6 +24,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const RequestModal = (props) => {
+
+	const dialogContentText = useRef();
 	
 	const handleClose = () => {
 		props.setOpen(false);
@@ -40,54 +43,68 @@ const RequestModal = (props) => {
 		>
 			<DialogTitle id="alert-dialog-slide-title">{i18n.t('request_send_request')}</DialogTitle>
 			<DialogContent>
-				<DialogContentText id="alert-dialog-slide-description">
-					<FormControl className="formControl" fullWidth>
-						<Row>
+				<DialogContentText 
+					id="alert-dialog-slide-description" 
+					component="div" 
+					ref={dialogContentText}>
+					 <FormControl className="formControl" fullWidth>
+						<Row> 
 							<Col md="12" className="col">
 								<InputLabel id="request-send-to">{i18n.t('request_send_to')}</InputLabel>
 								<Select
 									labelId="demo-simple-select-label"
 									id="demo-simple-select" fullWidth>
-									<MenuItem value={10}>Ten</MenuItem>
+									<MenuItem value={'10'}>Ten</MenuItem>
 								</Select>
 							</Col>
 							<Col md="12" className="col">
 								<TextField 
-									id="standard-basic" 
 									label={i18n.t('request_name')} 
 									fullWidth 
 								/>
 							</Col>
 							<Col md="12" className="col">
 								<TextField 
-									id="standard-basic" 
 									label={i18n.t('request_last_name')} 
 									fullWidth 
 								/>
 							</Col>
 							<Col md="12" className="col">
 								<TextField 
-									id="standard-basic" 
 									label={i18n.t('request_email')} 
 									fullWidth 
 								/>
 							</Col>
 							<Col md="12" className="col">
 								<TextField 
-									id="standard-basic" 
 									label={i18n.t('request_description')} 
 									fullWidth 
 								/>
 							</Col>
 							<Col md="12" className="col">
-								<Input id="assets" name="assets" type="file" inputProps={{ multiple: true }} />
+								<label id="request-send-to">{i18n.t('request_send_to')}</label>
+								<br />
+								<Input id="assets" name="assets" type="file" />
 							</Col>
 						</Row>
-					</FormControl>
+					</FormControl> 
 				</DialogContentText>
 			</DialogContent>
 			<DialogActions>
-				{/* <a href="#">{i18n.t('connect_learn_connect')}</a> */}
+				<Button 
+					variant="contained" 
+					color="primary" 
+					// onClick={handleClickOpen}
+					className="btn-modal">
+        			{i18n.t('request_upload_file')}
+				</Button>
+				<Button 
+					variant="contained" 
+					color="primary" 
+					// onClick={handleClickOpen}
+					className="btn-modal">
+        			{i18n.t('request_publish')}
+				</Button>
 			</DialogActions>
 		</Dialog>
 	

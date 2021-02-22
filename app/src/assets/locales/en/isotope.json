@@ -13,5 +13,7 @@
     "request_last_name": "LastName",
     "request_email": "Email",
     "request_description": "Description",
+    "request_upload_file": "Upload File",
+    "request_publish": "Publish",
     "provider_button": "New Provider"
 }

@@ -28,18 +28,15 @@ const store = createStore(rootReducer, composeEnhancers(
 ));
 
 ReactDOM.render(
-	<React.StrictMode>
-		 <Provider store={store}>
-			<I18nextProvider>
-				<BrowserRouter i18n={i18n}>
-					<App />
-				</BrowserRouter>
-			</I18nextProvider>
-		</Provider>
-	</React.StrictMode>,
+	<Provider store={store}>
+		<I18nextProvider>
+			<BrowserRouter i18n={i18n}>
+				<App />
+			</BrowserRouter>
+		</I18nextProvider>
+	</Provider>,
 	document.getElementById('root')
 );
-
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
