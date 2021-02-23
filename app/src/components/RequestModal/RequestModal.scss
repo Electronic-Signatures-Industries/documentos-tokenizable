@@ -1,0 +1,64 @@
+@import '../../App.scss';
+
+#container-request-modal {
+    .col {
+        margin-bottom: 25px;
+    }
+
+    #request-send-to {
+        margin-left: 15px;
+    }
+
+    .MuiDialog-paperWidthSm {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .MuiDialogTitle-root {
+        background: #57BF53;
+        color: white;
+        box-shadow: 0 0 10px #636363;
+    }
+
+    .formControl {
+        margin: 5px;
+        min-width: 120;
+    }
+    
+    .MuiInput-underline:after {
+        border-bottom: 2px solid #57BF53;
+    }
+
+    .MuiInputLabel-root.Mui-focused {
+        color: #57BF53;
+    }
+
+    .MuiDialogActions-root {
+        justify-content: flex-start;
+    }
+
+    .upload-file {
+        display: none;
+    }
+
+    .file-color { 
+        color: $main-color;
+    }
+
+    .file-chip {
+        background: #E0E0E1;
+        border-radius: 45px;
+        height: 45px;
+        max-width: 210px;
+        text-align: center;
+        padding-top: 11px;
+        margin-top: -10px;
+    }
+
+    .file-ellipsis {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-left: 10px;
+    }
+    
+}

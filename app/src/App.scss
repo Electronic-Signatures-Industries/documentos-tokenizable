@@ -1,2 +1,16 @@
 $white-color: #ffff;
 $black-color: #0000;
+$main-color: #3AC13C;
+
+
+.btn-new {
+    float: right;
+    position: relative !important;
+    right: 1rem;
+    margin-bottom: 10px !important;
+    background: $main-color !important;
+}
+
+.btn-modal {
+    background: $main-color !important;
+}

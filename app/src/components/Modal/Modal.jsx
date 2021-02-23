@@ -36,6 +36,7 @@ const Modal = (props) => {
 			onClose={handleClose}
 			aria-labelledby="alert-dialog-slide-title"
 			aria-describedby="alert-dialog-slide-description"
+			id="container-modal"
 		>
 			<DialogTitle id="alert-dialog-slide-title">{i18n.t('connect_wallet')}</DialogTitle>
 			<DialogContent>
