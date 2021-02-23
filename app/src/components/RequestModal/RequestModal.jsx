@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types'
-import {Row, Col} from 'reactstrap';
+import AttachFile from '@material-ui/icons/AttachFile';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -14,6 +14,7 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Slide from '@material-ui/core/Slide';
 import Button from '@material-ui/core/Button';
+import {Row, Col} from 'reactstrap';
 import i18n from 'i18next';
 
 import './RequestModal.scss';
@@ -26,10 +27,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const RequestModal = (props) => {
 
 	const dialogContentText = useRef();
+
+	const [file, setFile] = useState({});
 	
 	const handleClose = () => {
 		props.setOpen(false);
 	};
+
+	const uploadFile = (file) => {
+		setFile(file.target.files[0]);
+	}
 
 	return (
 		<Dialog
@@ -82,9 +89,30 @@ const RequestModal = (props) => {
 								/>
 							</Col>
 							<Col md="12" className="col">
-								<label id="request-send-to">{i18n.t('request_send_to')}</label>
+								<label className={file.name ? 'file-color' : '' }>
+									{i18n.t('request_file')}
+								</label>
+								<Input 
+									id="upload-file"
+									name="upload-file" 
+									type="file" 
+									className="upload-file"
+									onChange={uploadFile} />
 								<br />
-								<Input id="assets" name="assets" type="file" />
+								<Row>
+									<Col md="2">
+										<label htmlFor="upload-file">
+											<AttachFile className={file.name ? 'file-color' : '' } />
+										</label>
+									</Col>
+									<Col md="10">
+										<div className={file.name ? 'file-chip file-ellipsis' : ''}>
+											<span>
+												{file.name}
+											</span>
+										</div>
+									</Col>
+								</Row>
 							</Col>
 						</Row>
 					</FormControl> 

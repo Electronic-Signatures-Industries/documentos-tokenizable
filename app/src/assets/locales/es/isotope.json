@@ -13,6 +13,7 @@
     "request_last_name": "Apellido",
     "request_email": "Correo",
     "request_description": "Descripcion",
+    "request_file": "Archivo",
     "request_upload_file": "Subir Archivo",
     "request_publish": "Publicar",
     "provider_button": "Nuevo Proveedor"
