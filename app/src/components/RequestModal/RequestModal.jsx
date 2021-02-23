@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types'
 import AttachFile from '@material-ui/icons/AttachFile';
+import IconButton from '@material-ui/core/IconButton';
+import Clear from '@material-ui/icons/Clear';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -36,6 +38,10 @@ const RequestModal = (props) => {
 
 	const uploadFile = (file) => {
 		setFile(file.target.files[0]);
+	}
+
+	const cleanFile = () => {
+		setFile({});
 	}
 
 	return (
@@ -105,12 +111,24 @@ const RequestModal = (props) => {
 											<AttachFile className={file.name ? 'file-color' : '' } />
 										</label>
 									</Col>
-									<Col md="10">
+									<Col md="8">
 										<div className={file.name ? 'file-chip file-ellipsis' : ''}>
 											<span>
 												{file.name}
 											</span>
 										</div>
+									</Col>
+									<Col md="2">
+										{ file.name ? 
+											<IconButton 
+												className="file-color" onClick={cleanFile}
+												color="primary" 
+												aria-label="">
+												<Clear  />
+											</IconButton>
+											: 
+											null
+										}
 									</Col>
 								</Row>
 							</Col>
