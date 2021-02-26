@@ -2,6 +2,12 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
 	isSide: false,
+	balances: { 'bnb' : 0, 'dai' : 0 },
+	allowance: { 'bnb' : 0, 'dai' : 0 },
+	network: 'test',
+	address: '',
+	did: '',
+	isConnected: false
 };
 
 const active = (state, action) => {
