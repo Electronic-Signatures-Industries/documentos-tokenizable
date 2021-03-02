@@ -3,6 +3,7 @@ import { Route, Switch} from 'react-router-dom';
 import Home from './containers/Home/Home'
 import Provider from './containers/Provider/Provider'
 import Request from './containers/Request/Request'
+import XdvWallet from './containers/XdvWallet/XdvWallet';
 
 import Layout from './containers/Layout/Layout';
 
@@ -38,6 +39,12 @@ const AppRoute = () => {
 							<Request />
 						</Layout>
 					)} 
+			/>
+
+			<Route 
+				path="/xdv-wallet" 
+				exact 
+				component={XdvWallet}
 			/>
 		</Switch>
 	);

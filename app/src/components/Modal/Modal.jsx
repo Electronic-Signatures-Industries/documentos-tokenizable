@@ -8,6 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import i18n from 'i18next';
 
+import { WindowOpener } from '../../windowOpener';
 import Wallets from '../Wallets/Wallets'; 
 import { 
 	ReactComponent as BinanceChain 
@@ -43,8 +44,14 @@ const Modal = (props) => {
 				<DialogContentText id="alert-dialog-slide-description">
 					<Wallets title={'Binance Chain Wallet'} icon={BinanceChain} >
 					</Wallets>
-					<Wallets title={'Metamask'} icon={Metamask} >
+					<Wallets title={'Xdv Wallet'} icon={Metamask}  >
 					</Wallets>
+					<WindowOpener
+						url="http://localhost:3001/xdv-wallet"
+						// bridge={this.xdvWalletResponse}
+					>
+                        Open Browser
+					</WindowOpener>
 				</DialogContentText>
 			</DialogContent>
 			<DialogActions>
