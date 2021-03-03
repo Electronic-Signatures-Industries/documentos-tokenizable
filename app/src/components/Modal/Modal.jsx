@@ -23,7 +23,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const Modal = (props) => {
-	
+
 	const handleClose = () => {
 		props.setOpen(false);
 	};
@@ -41,16 +41,12 @@ const Modal = (props) => {
 		>
 			<DialogTitle id="alert-dialog-slide-title">{i18n.t('connect_wallet')}</DialogTitle>
 			<DialogContent>
-				<DialogContentText id="alert-dialog-slide-description">
+				<DialogContentText id="alert-dialog-slide-description" component="div">
 					<Wallets title={'Binance Chain Wallet'} icon={BinanceChain} >
 					</Wallets>
-					<Wallets title={'Xdv Wallet'} icon={Metamask}  >
-					</Wallets>
-					<WindowOpener
-						url="http://localhost:3001/xdv-wallet"
-						// bridge={this.xdvWalletResponse}
-					>
-                        Open Browser
+					<WindowOpener url={process.env.REACT_APP_XDV_WALLET_URL}>
+						<Wallets title={'Xdv Wallet'} icon={Metamask}>
+						</Wallets>
 					</WindowOpener>
 				</DialogContentText>
 			</DialogContent>

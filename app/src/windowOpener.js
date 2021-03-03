@@ -60,16 +60,16 @@ export const WindowOpener = (props) => {
 
 	const { children } = props;
 	return (
-		<button type="button" onClick={onClickHandler}>
+		<div type="button" onClick={onClickHandler}>
 			{children}
-		</button>
+		</div>
 	);
 	
 }
 
 WindowOpener.propTypes = {
 	url: PropTypes.string.isRequired,
-	bridge: PropTypes.func.isRequired,
+	// bridge: PropTypes.func.isRequired,
 	children: PropTypes.node.isRequired,
 	name: PropTypes.string,
 	opts: PropTypes.string
