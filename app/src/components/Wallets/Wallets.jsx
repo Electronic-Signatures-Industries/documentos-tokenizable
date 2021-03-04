@@ -8,7 +8,7 @@ import './wallets.scss';
 const Wallets = (props) => {
 	const Icon = props.icon;
 	return (
-		<Grid className="wallet-border" component="span">
+		<Grid className="wallet-border" component="span" onClick={props.onClick}>
 			<Typography component="span">{props.title}</Typography>
 			<Icon />
 		</Grid>
@@ -17,7 +17,8 @@ const Wallets = (props) => {
 
 Wallets.propTypes = {
 	title: PropTypes.string,
-	icon: PropTypes.object.isRequired
+	icon: PropTypes.object.isRequired,
+	onClick: PropTypes.func.isRequired
 }
 
 export default Wallets;

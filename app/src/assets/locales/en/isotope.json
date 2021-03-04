@@ -16,5 +16,7 @@
     "request_upload_file": "Upload File",
     "request_file": "File",
     "request_publish": "Publish",
-    "provider_button": "New Provider"
+    "provider_button": "New Provider",
+    "new_account_xdv_title": "¿Are you new Xdv?" 
+    
 }

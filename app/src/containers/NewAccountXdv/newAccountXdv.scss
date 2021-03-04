@@ -1,0 +1,16 @@
+.new-account-container {
+    padding: 100px;
+    .new-account-title {
+        text-align: center;
+        margin-bottom: 40px;
+        right: 3rem;
+        position: relative;
+    }
+    .card-conatiner {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .btn-create {
+        padding-top: 23px;
+    }
+}    

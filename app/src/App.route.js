@@ -4,6 +4,8 @@ import Home from './containers/Home/Home'
 import Provider from './containers/Provider/Provider'
 import Request from './containers/Request/Request'
 import XdvWallet from './containers/XdvWallet/XdvWallet';
+import NewAccountXdv from './containers/NewAccountXdv/NewAccountXdv';
+
 
 import Layout from './containers/Layout/Layout';
 
@@ -37,6 +39,17 @@ const AppRoute = () => {
 					(
 						<Layout {...props}>
 							<Request />
+						</Layout>
+					)} 
+			/>
+
+			<Route 
+				path="/nueva-cuenta-xdv" 
+				exact 
+				render={props => 
+					(
+						<Layout {...props}>
+							<NewAccountXdv />
 						</Layout>
 					)} 
 			/>

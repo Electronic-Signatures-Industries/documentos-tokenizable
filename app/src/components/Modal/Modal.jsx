@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'
+import { useHistory } from 'react-router-dom';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -24,9 +25,20 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const Modal = (props) => {
 
+	const [acount, setAcount] = useState(false);
+	const history = useHistory();
+
 	const handleClose = () => {
 		props.setOpen(false);
 	};
+
+	const handleWallet = () => {
+		history.push({
+			pathname: '/nueva-cuenta-xdv'
+		});
+		handleClose();
+		setAcount(true)
+	}
 
 	return (
 
@@ -42,12 +54,12 @@ const Modal = (props) => {
 			<DialogTitle id="alert-dialog-slide-title">{i18n.t('connect_wallet')}</DialogTitle>
 			<DialogContent>
 				<DialogContentText id="alert-dialog-slide-description" component="div">
-					<Wallets title={'Binance Chain Wallet'} icon={BinanceChain} >
-					</Wallets>
-					<WindowOpener url={process.env.REACT_APP_XDV_WALLET_URL}>
-						<Wallets title={'Xdv Wallet'} icon={Metamask}>
-						</Wallets>
-					</WindowOpener>
+					<Wallets title={'Binance Chain Wallet'} icon={BinanceChain} />
+					{acount ? 
+						<WindowOpener url={process.env.REACT_APP_XDV_WALLET_URL}>
+							<Wallets title={'Xdv Wallet'} icon={Metamask} />
+						</WindowOpener>
+						: <Wallets title={'Xdv Wallet'} icon={Metamask} onClick={handleWallet} />}
 				</DialogContentText>
 			</DialogContent>
 			<DialogActions>

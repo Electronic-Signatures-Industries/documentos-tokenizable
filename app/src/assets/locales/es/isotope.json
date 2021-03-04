@@ -16,5 +16,12 @@
     "request_file": "Archivo",
     "request_upload_file": "Subir Archivo",
     "request_publish": "Publicar",
-    "provider_button": "Nuevo Proveedor"
+    "provider_button": "Nuevo Proveedor",
+    "new_account_xdv_title": "¿Es nuevo en Xdv?",
+    "new_account_xdv_phrase": "No, ya tengo una frase semilla",
+    "new_account_xdv_import": "Importa tu monedero existente usando la frase semilla de 12 palabras",
+    "new_account_xdv_wallet_import": "Importar Monedero",
+    "new_account_xdv_get_ready": "No, ya tengo una frase semilla",
+    "new_account_xdv_create": "Esto creará un nuevo monedero y frase semilla",
+    "new_account_xdv_wallet_create": "Crear Monedero"
 }
