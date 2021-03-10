@@ -18,7 +18,17 @@ binanceSmartChain(web3,address){
 async getXDVWeb3Provider(network){
     // Init with HD mnemonic (server side)
     const providerUrl = 'https://data-seed-prebsc-1-s2.binance.org:8545/'; //'https://bsc-dataseed1.ninicoin.io/';
+    
+    /** pseudo */
+    const account = Wallet.getAccount();
+    if(account){
+        // pregunntar si queires crear una cuenta nueva o usar una de las que estan en pouch
+    }
+    else{
+        // si no existe crear nueva o existente con mnemonico
+    }
 
+    /*** */
     const hasWalletSessions = await Wallet.hasActiveSession();
     let walletId = '';
     if(!hasWalletSessions){
