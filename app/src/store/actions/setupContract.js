@@ -1,5 +1,5 @@
 import Web3 from "web3";
-import { Wallet } from "xdv-universal-wallet";
+import { Wallet } from "xdv-universal-wallet/src/crypto/Wallet";
 import { DIDManager } from "xdv-universal-wallet/lib/3id/DIDManager";
 
 export const setup = ( payload ) => {

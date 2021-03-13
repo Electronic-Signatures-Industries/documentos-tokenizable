@@ -41,9 +41,9 @@ const Modal = (props) => {
 			<DialogTitle id="alert-dialog-slide-title">{i18n.t('connect_wallet')}</DialogTitle>
 			<DialogContent>
 				<DialogContentText id="alert-dialog-slide-description">
-					<Wallets title={'Binance Chain Wallet'} icon={BinanceChain} >
+					<Wallets type='binance' title={'Binance Chain Wallet'} icon={BinanceChain} >
 					</Wallets>
-					<Wallets title={'Metamask'} icon={Metamask} >
+					<Wallets type='metamask' title={'Metamask'} icon={Metamask} >
 					</Wallets>
 				</DialogContentText>
 			</DialogContent>
