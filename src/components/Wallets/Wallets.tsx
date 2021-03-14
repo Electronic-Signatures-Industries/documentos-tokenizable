@@ -16,6 +16,7 @@ class Wallets extends React.Component<WalletProps, any> {
 }
 
 type WalletProps = {
+  type: string
   title: string
   icon: any
 }
